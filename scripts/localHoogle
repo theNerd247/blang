@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nix-shell -A blang-shell --command "hoogle server --local" ./default.nix

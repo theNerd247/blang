@@ -20,8 +20,20 @@ executable blang
   main-is:             Main.hs
   -- other-modules:
   -- other-extensions:
+  ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
+  default-extensions:
+      DataKinds
+    , FlexibleContexts
+    , GADTs
+    , LambdaCase
+    , PolyKinds
+    , RankNTypes
+    , ScopedTypeVariables
+    , TypeApplications
+    , TypeOperators
+    , TypeFamilies
   build-depends:       
-    base
+     base
    , containers
    , free
    , mtl
@@ -31,5 +43,8 @@ executable blang
    , cassava
    , transformers
    , Decimal
+   , relude
+   , polysemy
+   , polysemy-plugin
   -- hs-source-dirs:
   default-language:    Haskell2010

@@ -1,15 +1,7 @@
 let
-  mkHaskellShell = pkgName: self: super:
-  let
-    hpkgs = self.haskellPackages;
-    pkg = hpkgs."${pkgName}";
-  in
-    { "${pkgName}-shell" = super.mkShell
-      { inputsFrom  = [ pkg pkg.env ];  
-        buildInputs = with hpkgs; [ cabal-install ghcid ];
-      };
-    };
+  mkHaskellShell = import ./mkHaskellShell.nix;
 in
+
 [ (import ./haskell.nix)
   (mkHaskellShell "blang")
 ]
