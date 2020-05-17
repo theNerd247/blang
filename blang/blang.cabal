@@ -23,31 +23,34 @@ executable blang
   ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   default-extensions:
       DataKinds
+    , DeriveTraversable
     , FlexibleContexts
     , GADTs
     , LambdaCase
+    , NoImplicitPrelude
     , PolyKinds
     , RankNTypes
     , ScopedTypeVariables
+    , TemplateHaskell
     , TypeApplications
-    , TypeOperators
     , TypeFamilies
+    , TypeOperators
   build-depends:       
      base
+   , Decimal
+   , cassava
    , containers
    , free
+   , megaparsec
    , mtl
-   , recursion-schemes
-   , text
-   , time
-   , cassava
-   , transformers
-   , Decimal
-   , relude
+   , optparse-generic
    , polysemy
    , polysemy-plugin
-   , megaparsec
-   , optparse-generic
+   , recursion-schemes
+   , relude
    , repline
+   , text
+   , time
+   , transformers
   -- hs-source-dirs:
   default-language:    Haskell2010
