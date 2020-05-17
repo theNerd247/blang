@@ -42,5 +42,3 @@ type Amount = Decimal
 type Account = Text 
  
 makeBaseFunctor ''Term
-
-
