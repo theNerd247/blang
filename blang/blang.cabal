@@ -46,5 +46,8 @@ executable blang
    , relude
    , polysemy
    , polysemy-plugin
+   , megaparsec
+   , optparse-generic
+   , repline
   -- hs-source-dirs:
   default-language:    Haskell2010
