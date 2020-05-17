@@ -18,7 +18,8 @@ extra-source-files:  CHANGELOG.md
 
 executable blang
   main-is:             Main.hs
-  -- other-modules:
+  other-modules:
+    Data.Types
   -- other-extensions:
   ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   default-extensions:
