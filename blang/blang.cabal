@@ -23,7 +23,8 @@ executable blang
   -- other-extensions:
   ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   default-extensions:
-      DataKinds
+      ConstraintKinds
+    , DataKinds
     , DeriveTraversable
     , FlexibleContexts
     , GADTs

@@ -8,4 +8,10 @@ import Polysemy.IO
 import Relude
 import Text.Megaparsec
 
--- parseExpr :: Members '[Error ParserError, IO] r => LText -> Sem r Parse
+type Parser s a = Parsec ParserError s a
+
+data ParserError
+
+type MemberParser s r = Member (Embed (Parser s) (MemberImport r)) r
+
+-- parseExpr :: ParserEff r => LText -> Sem r Term

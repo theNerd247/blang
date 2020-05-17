@@ -2,7 +2,10 @@ module Imports where
 
 import Relude (FilePath, Text, LText, Show)
 import Polysemy
+import Polysemy.Error
 import Data.Types
+
+type MemberImport c r = Members '[ Error ImportError, Import, c ] r
 
 -- | Effect for executing an import provided a URI Imports are pure in the
 -- language is an interop with the parser.
